@@ -1,0 +1,239 @@
+/* General Styles */
+.main-web {
+    background-image: url('https://i.pinimg.com/736x/30/78/dc/3078dc95ba4087aa1481fe1c168de7d5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0; /* Pastikan tidak ada margin */
+    padding: 0; /* Pastikan tidak ada padding */
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Tidak ada jarak antar elemen */
+    position: relative;
+    flex-wrap: wrap; /* Agar elemen bisa berpindah ke baris baru di layar kecil */
+   }
+
+.bg-yellow1,
+.bg-blue1,
+.bg-salmon1 {
+    background-color: rgb(247, 247, 211);
+    width: 250px;
+    height: 300px;
+    opacity: 0.5;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.bg-yellow1 {
+    background-color: yellow;
+    transform: rotate(-10deg); /* Miring sedikit ke kiri */
+}
+
+.bg-blue1 {
+    background-color: blue;
+    transform: rotate(0deg); /* Tetap lurus */
+}
+
+.bg-salmon1 {
+    background-color: salmon;
+    transform: rotate(10deg); /* Miring sedikit ke kanan */
+}
+
+/* Hover Effects */
+.bg-yellow1:hover {
+    transform: rotate(-15deg); /* Bergerak sedikit ke kiri */
+    opacity: 1;
+}
+
+.bg-blue1:hover {
+    transform: scale(1.05); /* Membesar sedikit */
+    opacity: 1;
+}
+
+.bg-salmon1:hover {
+    transform: rotate(15deg); /* Bergerak sedikit ke kanan */
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .bg-yellow1,
+    .bg-blue1,
+    .bg-salmon1 {
+        width: 200px; /* Ukuran lebih kecil untuk tablet */
+        height: 250px;
+    }
+
+    .bg-yellow1 {
+        transform: rotate(-8deg); /* Sedikit kurang miring */
+    }
+
+    .bg-salmon1 {
+        transform: rotate(8deg); /* Sedikit kurang miring */
+    }
+}
+
+@media (max-width: 768px) {
+    .card1 {
+        flex-direction: column; /* Elemen bertumpuk di layar kecil */
+    }
+
+    .bg-yellow1,
+    .bg-blue1,
+    .bg-salmon1 {
+        width: 150px; /* Ukuran lebih kecil untuk ponsel */
+        height: 200px;
+    }
+
+    .bg-yellow1 {
+        transform: rotate(-5deg); /* Miring lebih kecil */
+    }
+
+    .bg-salmon1 {
+        transform: rotate(5deg); /* Miring lebih kecil */
+    }
+}
+
+.tombol {
+    border-radius : 50px;
+}
+/* Font styling from google */
+ 
+.playwrite-gb-s {
+    font-family: "Playwrite GB S", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+  
+.bebas-neue {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* Songs styling */
+.songs {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.music-player {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.music-player img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+}
+
+.music-info {
+    flex: 1;
+    text-align: left;
+}
+
+.music-info h3 {
+    margin-bottom: 10px;
+}
+
+.music-info p {
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+.controls button {
+    background-color: #1db954;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+/*image stying*/
+.gambar-galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsif */
+    gap: 10px; /* Jarak antar gambar */
+  }
+  
+  .gambar-galeri img {
+    width: 100%;
+    border-radius: 8px; /* Opsional: sudut melengkung */
+    transition: transform 0.3s;
+  }
+  
+  .gambar-galeri img:hover {
+    transform: scale(1.05); /* Zoom saat hover */
+  }
+  
+  .quote-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  .quote-container:hover {
+    transform: translateY(-10px);
+  }
+  .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+  }
+  .author {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700;
+  }
+  .like-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffd700;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .like-button:hover {
+    background: #ff8c00;
+  }
+  .like-count {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
